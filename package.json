@@ -35,6 +35,7 @@
     "yup": "^1.0.0"
   },
   "devDependencies": {
+    "@types/next": "^9.0.0",
     "@types/react-redux": "^7.1.25",
     "@types/redux-saga": "^0.10.5"
   }
