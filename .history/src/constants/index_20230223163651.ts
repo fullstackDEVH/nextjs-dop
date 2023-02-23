@@ -1,0 +1,3 @@
+import { REGEX_PASSWORD, REGEX_EMAIL } from './regex';
+import { SCHEMA_LOGIN, SCHEMA_CREATE } from './schema';
+export { REGEX_PASSWORD, REGEX_EMAIL, SCHEMA_LOGIN, SCHEMA_CREATE };
