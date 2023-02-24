@@ -2,6 +2,7 @@
 .login__form {
   width: 400px;
   font-size: 1.3rem;
+  margin: auto;
 }
 .login__form .form__input {
   width: 100%;
@@ -50,8 +51,6 @@
   color: var(--main-color);
   text-decoration: underline var(--main-color);
 }
-
-
 
 .form__btnsingup {
   width: 100%;

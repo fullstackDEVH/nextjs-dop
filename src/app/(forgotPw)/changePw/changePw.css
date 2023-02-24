@@ -2,6 +2,7 @@
 .changePw__form {
   width: 400px;
   font-size: 1.3rem;
+  margin: auto;
 }
 .changePw__form .form__input {
   width: 100%;
@@ -33,6 +34,3 @@
   color: var(--white-color);
   font-size: 30px;
 }
-
-
-

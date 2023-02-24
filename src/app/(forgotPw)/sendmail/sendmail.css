@@ -2,6 +2,7 @@
 .sendmail__form {
   width: 400px;
   font-size: 1.3rem;
+  margin: auto;
 }
 .sendmail__form .form__input {
   width: 100%;
@@ -16,5 +17,3 @@
 .sendmail__form .form__input span {
   font-weight: 700;
 }
-
-

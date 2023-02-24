@@ -1,13 +1,8 @@
-"use client";
+import React from "react";
 
-import { ReactNode } from "react";
-import PublicIcon from "@mui/icons-material/Public";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
-import "@/styles/SignupNavbarComponent.css";
-
-
-function LogoLanguage() {
+function NavBarSignUp() {
   return (
     <div className="navbar">
       <div className="navbar__content">
@@ -39,4 +34,5 @@ function LogoLanguage() {
     </div>
   );
 }
-export default LogoLanguage;
+
+export default NavBarSignUp;
