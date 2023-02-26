@@ -54,7 +54,7 @@ function Login() {
         <Button className="btn form__btnlogin" variant="contained">
           Login now
         </Button>
-        <Button href="/signup/step1" className="form__btnsingup" variant="outlined">
+        <Button href="/signup" className="form__btnsingup" variant="outlined">
           SingUp Now
         </Button>
       </form>

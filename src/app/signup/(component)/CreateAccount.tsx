@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import LockIcon from "@mui/icons-material/Lock";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
-function createAccount() {
+function createAccount(props: { onIncrementStep: () => void }) {
   return (
     <div className="signupcontent">
       <div className="signupcontent__title">CREATE ACCOUNT</div>
@@ -49,7 +49,7 @@ function createAccount() {
             <LockIcon className="icon" />
           </div>
         </div>
-        <Button href="/signup/step2" className="btn" variant="contained">
+        <Button onClick={props.onIncrementStep} className="btn" variant="contained">
           Signup Now
         </Button>
       </div>

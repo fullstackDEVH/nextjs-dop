@@ -15,17 +15,15 @@ import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
-function Infomation() {
+function Infomation(props: { onIncrementStep: () => void }) {
   //date time picker
-  const [value, setValue] = React.useState<Dayjs | null>(
-    dayjs("2023-02-23T21:11:54")
-  );
+  const [value, setValue] = React.useState<Dayjs | null>(dayjs('2023-02-23T21:11:54'));
   const handleChange1 = (newValue: Dayjs | null) => {
     setValue(newValue);
   };
 
   //slected country
-  const [country, setCountry] = React.useState("");
+  const [country, setCountry] = React.useState('');
   const handleChange = (event: SelectChangeEvent) => {
     setCountry(event.target.value as string);
   };
@@ -36,14 +34,8 @@ function Infomation() {
       <div className="signupcontent__form">
         <div className="form__input">
           <span>Country</span>
-          <FormControl
-            className="slected"
-            variant="filled"
-            sx={{ m: 1, minWidth: 120 }}
-          >
-            <InputLabel id="demo-simple-select-filled-label">
-              Choose your country
-            </InputLabel>
+          <FormControl className="slected" variant="filled" sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel id="demo-simple-select-filled-label">Choose your country</InputLabel>
             <Select
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
@@ -85,11 +77,7 @@ function Infomation() {
             aria-labelledby="demo-row-radio-buttons-group-label"
             name="row-radio-buttons-group"
           >
-            <FormControlLabel
-              value="female"
-              control={<Radio />}
-              label="Female"
-            />
+            <FormControlLabel value="female" control={<Radio />} label="Female" />
             <FormControlLabel value="male" control={<Radio />} label="Male" />
             <FormControlLabel value="other" control={<Radio />} label="Other" />
           </RadioGroup>
@@ -116,7 +104,7 @@ function Infomation() {
             className="input"
           />
         </div>
-        <Button href="/signup/step3" className="btn" variant="contained">
+        <Button onClick={props.onIncrementStep} className="btn" variant="contained">
           Signup Now
         </Button>
       </div>

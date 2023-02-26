@@ -3,7 +3,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 
-function Verification(){
+function Verification(props: { onIncrementStep: () => void }) {
   return (
     <div className="signupcontent">
       <div className="signupcontent__title">VERIFICATION</div>
@@ -31,7 +31,7 @@ function Verification(){
             className="input"
           />
         </div>
-        <Button href="/signup/step4" className="btn" variant="contained">
+        <Button onClick={props.onIncrementStep} className="btn" variant="contained">
           Email Verification
         </Button>
       </div>

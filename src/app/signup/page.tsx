@@ -15,6 +15,9 @@ import "../signup/signup.css";
 
 function SignUp() {
   const [currentStep, setCurrentStep] = useState(1);
+  const incrementStep = () => {
+    setCurrentStep(currentStep + 1);
+  };
   return (
     <div>
       <LoginWrapper>
@@ -28,7 +31,10 @@ function SignUp() {
             <NavBarSignUp />
           </Grid>
           <Grid item xs={9}>
-            {currentStep === 1 && <Infomation />}
+            {currentStep === 1 && <CreateAccount onIncrementStep={incrementStep} />}
+            {currentStep === 2 && <Infomation onIncrementStep={incrementStep} />}
+            {currentStep === 3 && <Verification onIncrementStep={incrementStep} />}
+            {currentStep === 4 && <Done />}
           </Grid>
         </Grid>
       </LoginWrapper>
