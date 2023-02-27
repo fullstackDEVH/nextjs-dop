@@ -8,6 +8,7 @@
   --btn-color: linear-gradient(90deg, rgba(39,231,158,1) 0%, rgba(30,198,233,1) 100%);
   --border-color: #00c5b5;
   --main-color:#1BADDE;
+  --font-family: "Roboto", sans-serif;
 }
 
 *,
@@ -19,7 +20,7 @@
   font-weight: normal;
 }
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
 }
 html {
   font-size: 62.5%;

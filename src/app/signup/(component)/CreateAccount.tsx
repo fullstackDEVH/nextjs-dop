@@ -1,55 +1,67 @@
 import React from "react";
+import styles from "@/app/signup/signup.module.css";
 
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import LockIcon from "@mui/icons-material/Lock";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
-function createAccount(props: { onIncrementStep: () => void }) {
+interface Props {
+  handleIncrementStep: () => void;
+}
+
+function CreateAccount({ handleIncrementStep }: Props) {
   return (
-    <div className="signupcontent">
-      <div className="signupcontent__title">CREATE ACCOUNT</div>
-      <div className="signupcontent__form">
-        <div className="form__input">
-          <span>Username</span> <br />
+    <div className={styles.signupcontent}>
+      <div className={styles.signupcontent__title}>CREATE ACCOUNT</div>
+      <div className={styles.signupcontent__form}>
+        <div className={styles.form__input}>
+          <label htmlFor="username">Username</label> <br />
           <TextField
-            id="filled-basic"
+            id="username"
             label="Enter your username"
             variant="filled"
             type="text"
-            className="input"
+            className={styles.input}
           />
-          <div className="form-input__icon">
-            <PersonOutlineIcon className="icon" />
+          <p className="err"></p>
+          <div className={styles.forminput__icon}>
+            <PersonOutlineIcon className={styles.icon} />
           </div>
         </div>
-        <div className="form__input">
-          <span>Password</span> <br />
+        <div className={styles.form__input}>
+          <label htmlFor="password">Password</label> <br />
           <TextField
-            id="filled-basic"
+            id="password"
             label="Enter your password"
             variant="filled"
             type="password"
-            className="input"
+            className={styles.input}
           />
-          <div className="form-input__icon">
-            <LockIcon className="icon" />
+          <p className="err"></p>
+          <div className={styles.forminput__icon}>
+            <LockIcon className={styles.icon} />
           </div>
         </div>
-        <div className="form__input">
-          <span>Confirm Password</span> <br />
+        <div className={styles.form__input}>
+          <label htmlFor="confirmPassword">Confirm Password</label> <br />
           <TextField
-            id="filled-basic"
+            id="confirmPassword"
             label="Please Re-enter your password"
             variant="filled"
             type="password"
-            className="input"
+            className={styles.input}
           />
-          <div className="form-input__icon">
-            <LockIcon className="icon" />
+          <p className="err"></p>
+          <div className={styles.forminput__icon}>
+            <LockIcon className={styles.icon} />
           </div>
         </div>
-        <Button onClick={props.onIncrementStep} className="btn" variant="contained">
+        <Button
+          className="btn"
+          variant="contained"
+          onClick={handleIncrementStep}
+        >
           Signup Now
         </Button>
       </div>
@@ -57,4 +69,4 @@ function createAccount(props: { onIncrementStep: () => void }) {
   );
 }
 
-export default createAccount;
+export default CreateAccount;

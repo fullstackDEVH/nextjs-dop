@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState } from "react";
+import styles from "@/app/signup/signup.module.css";
 
 // import MUI
 import dayjs, { Dayjs } from "dayjs";
@@ -15,32 +17,36 @@ import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
-function Infomation(props: { onIncrementStep: () => void }) {
+interface Props {
+  handleIncrementStep: () => void;
+}
+
+function Infomation({ handleIncrementStep }: Props) {
   //date time picker
-  const [value, setValue] = React.useState<Dayjs | null>(dayjs('2023-02-23T21:11:54'));
-  const handleChange1 = (newValue: Dayjs | null) => {
-    setValue(newValue);
+  const [valueDay, setValueDay] = useState<Dayjs | null>(dayjs(""));
+  const handleChangeDay = (newValue: Dayjs | null) => {
+    setValueDay(newValue);
   };
 
   //slected country
-  const [country, setCountry] = React.useState('');
-  const handleChange = (event: SelectChangeEvent) => {
+  const [country, setCountry] = React.useState("");
+  const handleChangeCountry = (event: SelectChangeEvent) => {
     setCountry(event.target.value as string);
   };
 
   return (
-    <div className="signupcontent-step2">
-      <div className="signupcontent__title">BASIC INFORMATION</div>
-      <div className="signupcontent__form">
-        <div className="form__input">
-          <span>Country</span>
-          <FormControl className="slected" variant="filled" sx={{ m: 1, minWidth: 120 }}>
+    <div className={styles.signupcontentstep2}>
+      <div className={styles.signupcontent__title}>BASIC INFORMATION</div>
+      <div className={styles.signupcontent__form}>
+        <div className={styles.form__input}>
+          <label htmlFor="country">Country</label>
+          <FormControl className={styles.slected} variant="filled" sx={{ m: 1, minWidth: 120 }}>
             <InputLabel id="demo-simple-select-filled-label">Choose your country</InputLabel>
             <Select
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
               value={country}
-              onChange={handleChange}
+              onChange={handleChangeCountry}
             >
               <MenuItem value="">
                 <em>Choose your country</em>
@@ -51,28 +57,28 @@ function Infomation(props: { onIncrementStep: () => void }) {
             </Select>
           </FormControl>
         </div>
-        <div className="form__input">
-          <span>Fullname</span>
+        <div className={styles.form__input}>
+          <label htmlFor="fullName">Fullname</label>
           <TextField
-            id="filled-basic"
+            id="fullName"
             label="Enter your fullname"
             variant="filled"
-            className="input"
+            className={styles.input}
           />
         </div>
-        <div className="form__input">
-          <span>Address</span>
+        <div className={styles.form__input}>
+          <label htmlFor="address">Address</label>
           <TextField
-            id="filled-basic"
+            id="address"
             label="Enter your address"
             variant="filled"
-            className="input"
+            className={styles.input}
           />
         </div>
-        <div className="form__input">
-          <span>Sex</span>
+        <div className={styles.form__input}>
+          <label>Sex</label>
           <RadioGroup
-            className="radio"
+            className={styles.radio}
             row
             aria-labelledby="demo-row-radio-buttons-group-label"
             name="row-radio-buttons-group"
@@ -82,29 +88,29 @@ function Infomation(props: { onIncrementStep: () => void }) {
             <FormControlLabel value="other" control={<Radio />} label="Other" />
           </RadioGroup>
         </div>
-        <div className="form__input">
-          <span>Date Of Birth</span>
+        <div className={styles.form__input}>
+          <label>Date Of Birth</label>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DesktopDatePicker
-              className="input"
+              className={styles.input}
               inputFormat="MM/DD/YYYY"
-              value={value}
-              onChange={handleChange1}
+              value={valueDay}
+              onChange={handleChangeDay}
               renderInput={(params) => <TextField {...params} />}
             />
           </LocalizationProvider>
         </div>
-        <div className="form__input">
-          <span>Phone Number</span>
+        <div className={styles.form__input}>
+          <label htmlFor="phoneNumber">Phone Number</label>
           <TextField
-            id="filled-basic"
+            id="phoneNumber"
             label="Enter your phone number"
             variant="filled"
             type="number"
-            className="input"
+            className={styles.input}
           />
         </div>
-        <Button onClick={props.onIncrementStep} className="btn" variant="contained">
+        <Button className="btn" variant="contained" onClick={handleIncrementStep}>
           Signup Now
         </Button>
       </div>

@@ -14,6 +14,15 @@
   border-radius: 5px;
   border: 1px solid var(--main-color);
 }
-.sendmail__form .form__input span {
+.sendmail__form .form__input label {
   font-weight: 700;
 }
+.sendmail__form .form__input .btn_sendmail{
+  font-size: 1.5rem;
+    position: absolute;
+    right: 0px;
+    top: 32px;
+    color: var(--main-color);
+}
+
+

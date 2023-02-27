@@ -1,16 +1,18 @@
 "use client";
 
 // import component
-import LoginWrapper from "../../components/login/LoginWrapperComponent";
-import LogoLanguage from "../../components/login/LogoLanguageComponent";
+import LoginWrapper from "@/components/login/LoginWrapperComponent";
+import LogoLanguage from "@/components/login/LogoLanguageComponent";
 //import MUI
 import TextField from "@mui/material/TextField";
 import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LockIcon from "@mui/icons-material/Lock";
+//
+import { useState } from "react";
 
-import "../login/login.css";
+import styles from "../login/login.module.css";
 
 function Login() {
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
@@ -18,43 +20,50 @@ function Login() {
   return (
     <LoginWrapper>
       <LogoLanguage />
-      <form className="login__form">
-        <div className="form__input">
-          <span>Username</span> <br />
+      <form className={styles.login__form}>
+        {/* username  */}
+        <div className={styles.form__input}>
+          <label htmlFor="username">Username</label> <br />
           <TextField
-            id="filled-basic"
+            id="username"
             label="Enter your username"
             variant="filled"
-            className="input"
+            className={styles.input}
           />
-          <div className="form-input__icon">
-            <PersonOutlineIcon className="icon" />
+          <p className="err"></p>
+          <div className={styles.forminput__icon}>
+            <PersonOutlineIcon className={styles.icon} />
           </div>
         </div>
-        <div className="form__input">
-          <span>Password</span> <br />
+        {/* password  */}
+        <div className={styles.form__input}>
+          <label htmlFor="password">Password</label> <br />
           <TextField
-            id="filled-basic"
+            id="password"
             label="Enter your password"
             variant="filled"
             type="password"
-            className="input"
+            className={styles.input}
           />
-          <div className="form-input__icon">
-            <LockIcon className="icon" />
+          <div className={styles.forminput__icon}>
+            <LockIcon className={styles.icon} />
           </div>
         </div>
-        <div className="form__pwinter">
-          <div className="pwinter__rememberpw">
+        <div className={styles.form__pwinter}>
+          <div className={styles.pwinter__rememberpw}>
             <Checkbox {...label} />
             <span>Remember me</span>
           </div>
-          <a className="pwinter__forgot">forgot password?</a>
+          <a className={styles.pwinter__forgot}>forgot password?</a>
         </div>
         <Button className="btn form__btnlogin" variant="contained">
           Login now
         </Button>
-        <Button href="/signup" className="form__btnsingup" variant="outlined">
+        <Button
+          href="/signup"
+          className={styles.form__btnsingup}
+          variant="outlined"
+        >
           SingUp Now
         </Button>
       </form>

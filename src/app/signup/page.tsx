@@ -11,7 +11,6 @@ import Done from "./(component)/Done";
 import LoginWrapper from "@/components/login/LoginWrapperComponent";
 import LogoLanguage from "@/components/login/LogoLanguageComponent";
 //css
-import "../signup/signup.css";
 
 function SignUp() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -23,17 +22,20 @@ function SignUp() {
       <LoginWrapper>
         <LogoLanguage />
 
-        {/* <NavBarSignUp />
-        <Infomation /> */}
-
         <Grid container>
           <Grid item xs={3}>
             <NavBarSignUp />
           </Grid>
           <Grid item xs={9}>
-            {currentStep === 1 && <CreateAccount onIncrementStep={incrementStep} />}
-            {currentStep === 2 && <Infomation onIncrementStep={incrementStep} />}
-            {currentStep === 3 && <Verification onIncrementStep={incrementStep} />}
+            {currentStep === 1 && (
+              <CreateAccount handleIncrementStep={incrementStep} />
+            )}
+            {currentStep === 2 && (
+              <Infomation handleIncrementStep={incrementStep} />
+            )}
+            {currentStep === 3 && (
+              <Verification handleIncrementStep={incrementStep} />
+            )}
             {currentStep === 4 && <Done />}
           </Grid>
         </Grid>

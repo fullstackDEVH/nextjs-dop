@@ -4,16 +4,16 @@ import { ReactNode } from "react";
 
 import PublicIcon from "@mui/icons-material/Public";
 
-import "@/styles/LogoLanguageComponent.css";
-
+import styles from "@/styles/LogoLanguageComponent.module.css";
+import Logo from "@/imgs/VBPO_Logo.png";
 function LogoLanguage() {
   return (
-    <div className="head">
-      <div className="logo">
-        <img src="/imgs/VBPO_Logo.png" alt="" />
+    <div className={styles.head}>
+      <div className={styles.logo}>
+        <img src={Logo.src} alt="Logo_VBPO" />
       </div>
-      <div className="language">
-        <PublicIcon className="language__icon" />
+      <div className={styles.language}>
+        <PublicIcon className={styles.language__icon} />
         <span>ENG</span>
       </div>
     </div>

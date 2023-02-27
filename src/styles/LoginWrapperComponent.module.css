@@ -1,3 +1,4 @@
+
 .login__wrapper {
   min-width: 1000px;
   height: 100vh;
@@ -8,7 +9,7 @@
   align-items: center;
   justify-content: center;
 }
-.login-wrapper__container {
+.loginwrapper__container {
   width: 1000px;
   height: 620px;
   background: var(--background-gray);

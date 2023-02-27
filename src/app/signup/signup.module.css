@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
 }
-.navbar__content .step span {
+.navbar__content .step label {
   font-size: 1.3rem;
   font-weight: 700;
   margin-left: 5px;
@@ -97,10 +97,10 @@
   border-radius: 5px;
   border: 1px solid var(--main-color);
 }
-.signupcontent__form .form__input span {
+.signupcontent__form .form__input label {
   font-weight: 700;
 }
-.signupcontent__form .form-input__icon {
+.signupcontent__form .forminput__icon {
   background: var(--main-color);
   bottom: 0px;
   right: 0px;
@@ -112,14 +112,14 @@
   align-items: center;
   justify-content: center;
 }
-.signupcontent__form .form-input__icon .icon {
+.signupcontent__form .forminput__icon .icon {
   color: var(--white-color);
   font-size: 30px;
 }
 /* create Account  step1*/
 
 /* Infomation  step2*/
-.signupcontent-step2 {
+.signupcontentstep2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -127,23 +127,23 @@
   align-items: center;
   flex-direction: column;
 }
-.signupcontent-step2 .signupcontent__title {
+.signupcontentstep2 .signupcontent__title {
   font-size: 2rem;
   font-weight: 600;
   color: var(--main-color);
   margin-bottom: 20px;
 }
-.signupcontent-step2 .signupcontent__form .form__input {
+.signupcontentstep2 .signupcontent__form .form__input {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
-.signupcontent-step2 .signupcontent__form .form__input .input {
+.signupcontentstep2 .signupcontent__form .form__input .input {
   margin-top: 0px;
   width: 70%;
 }
-.signupcontent-step2 .signupcontent__form .form__input .slected {
+.signupcontentstep2 .signupcontent__form .form__input .slected {
   width: 70%;
   border-radius: 5px;
   position: inherit;
@@ -151,15 +151,15 @@
   margin-bottom: 0;
   border: 1px solid var(--main-color);
 }
-.signupcontent-step2 .signupcontent__form .form__input .radio {
+.signupcontentstep2 .signupcontent__form .form__input .radio {
   width: 70%;
 }
 /* Verification  step3 */
-.signupcontent__form .form__input .btn-sendmail {
+.signupcontent__form .form__input .btn_sendmail {
   font-size: 1.5rem;
   position: absolute;
   right: 0px;
-  top: 35px;
+  top: 32px;
   color: var(--main-color);
 }
 /* Done step4  */
@@ -168,7 +168,7 @@
   flex-direction: column;
   align-items: center;
 }
-.signupcontent .signupcontent__form span {
+.signupcontent .signupcontent__form h2 {
   font-weight: 700;
   font-size: 2.5rem;
   color: var(--main-color);

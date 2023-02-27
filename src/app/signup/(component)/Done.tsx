@@ -1,15 +1,16 @@
 import React from "react";
+import styles from "@/app/signup/signup.module.css";
 
 import Button from "@mui/material/Button";
-
+import Img from "@/imgs/mail.png";
 function Done(){
   return (
-    <div className="signupcontent">
-      <div className="signupcontent__title">CREATE ACCOUNT</div>
-      <div className="signupcontent__form">
-        <img src="/imgs/mail.png" alt="" />
-        <span>Your Email Is Successfully Verified</span>
-        <Button href="/login" className="btn" variant="contained">
+    <div className={styles.signupcontent}>
+      <div className={styles.signupcontent__title}>DONE</div>
+      <div className={styles.signupcontent__form}>
+        <img src={Img.src} alt="" />
+        <h2>Your Email Is Successfully Verified</h2>
+        <Button href="/login" className="btn" variant="contained" >
           Login Now
         </Button>
       </div>

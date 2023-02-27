@@ -1,25 +1,25 @@
-import React from "react";
-import styles from "@/app/signup/signup.module.css";
-
+"use client";
+// import component
+import LoginWrapper from "@/components/login/LoginWrapperComponent";
+import LogoLanguage from "@/components/login/LogoLanguageComponent";
+// import MUI
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 
-interface Props {
-  handleIncrementStep: () => void;
-}
+import styles from "../SendEmail/sendmail.module.css";
 
-function Verification({ handleIncrementStep }: Props) {
+function SendEmail() {
   return (
-    <div className={styles.signupcontent}>
-      <div className={styles.signupcontent__title}>VERIFICATION</div>
-      <div className={styles.signupcontent__form}>
+    <LoginWrapper>
+      <LogoLanguage />
+      <form className={styles.sendmail__form}>
         <div className={styles.form__input}>
-          <label htmlFor="email">Email</label> <br />
+          <label htmlFor="email">Enter your email</label> <br />
           <TextField
             id="email"
-            label="Enter your username"
+            label="Enter your email"
             variant="filled"
-            type="Email"
+            type="email"
             className={styles.input}
           />
           <p className="err"></p>
@@ -27,27 +27,24 @@ function Verification({ handleIncrementStep }: Props) {
             Send
           </Button>
         </div>
+
         <div className={styles.form__input}>
           <label htmlFor="verificationCode">Verification code</label> <br />
           <TextField
             id="verificationCode"
-            label="Enter your verification code (6 digits)"
+            label="Enter verification code (6 digits)"
             variant="filled"
-            type="password"
+            type="number"
             className={styles.input}
           />
           <p className="err"></p>
         </div>
-        <Button
-          className="btn"
-          variant="contained"
-          onClick={handleIncrementStep}
-        >
+
+        <Button className="btn" variant="contained">
           Email Verification
         </Button>
-      </div>
-    </div>
+      </form>
+    </LoginWrapper>
   );
-};
-
-export default Verification;
+}
+export default SendEmail;
