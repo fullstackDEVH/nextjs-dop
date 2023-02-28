@@ -1,10 +1,10 @@
-import React from "react";
-import styles from "@/app/signup/signup.module.css";
+import React from 'react';
+import styles from '@/app/signup/signup.module.css';
 
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import LockIcon from "@mui/icons-material/Lock";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import LockIcon from '@mui/icons-material/Lock';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 interface Props {
   handleIncrementStep: () => void;
@@ -57,11 +57,7 @@ function CreateAccount({ handleIncrementStep }: Props) {
             <LockIcon className={styles.icon} />
           </div>
         </div>
-        <Button
-          className="btn"
-          variant="contained"
-          onClick={handleIncrementStep}
-        >
+        <Button className="btn" variant="contained" onClick={handleIncrementStep}>
           Signup Now
         </Button>
       </div>

@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import styles from "@/styles/LoginWrapperComponent.module.css";
+import { ReactNode } from 'react';
+import styles from '@/styles/LoginWrapperComponent.module.css';
 
 type LoginWrapperProps = {
   children: ReactNode;

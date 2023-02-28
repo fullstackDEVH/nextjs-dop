@@ -9,7 +9,7 @@
   border-radius: 10px 0 0 10px;
 }
 .navbar::after {
-  content: "";
+  content: '';
   border-left: 24px solid var(--white-color);
   border-top: 18px solid transparent;
   border-bottom: 18px solid transparent;
@@ -174,4 +174,3 @@
   color: var(--main-color);
   margin: 30px 0;
 }
-

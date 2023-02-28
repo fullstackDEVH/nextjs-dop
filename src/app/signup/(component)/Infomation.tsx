@@ -1,21 +1,21 @@
-import React from 'react'
-import { useState } from "react";
-import styles from "@/app/signup/signup.module.css";
+import React from 'react';
+import { useState } from 'react';
+import styles from '@/app/signup/signup.module.css';
 
 // import MUI
-import dayjs, { Dayjs } from "dayjs";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import FormControl from "@mui/material/FormControl";
-import MenuItem from "@mui/material/MenuItem";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import dayjs, { Dayjs } from 'dayjs';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import InputLabel from '@mui/material/InputLabel';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
+import MenuItem from '@mui/material/MenuItem';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 
 interface Props {
   handleIncrementStep: () => void;
@@ -23,13 +23,13 @@ interface Props {
 
 function Infomation({ handleIncrementStep }: Props) {
   //date time picker
-  const [valueDay, setValueDay] = useState<Dayjs | null>(dayjs(""));
+  const [valueDay, setValueDay] = useState<Dayjs | null>(dayjs(''));
   const handleChangeDay = (newValue: Dayjs | null) => {
     setValueDay(newValue);
   };
 
   //slected country
-  const [country, setCountry] = React.useState("");
+  const [country, setCountry] = useState('');
   const handleChangeCountry = (event: SelectChangeEvent) => {
     setCountry(event.target.value as string);
   };
@@ -117,6 +117,4 @@ function Infomation({ handleIncrementStep }: Props) {
     </div>
   );
 }
-
-
-export default Infomation
+export default Infomation;

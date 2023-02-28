@@ -1,21 +1,21 @@
-"use client";
+'use client';
 
 // import component
-import LoginWrapper from "@/components/login/LoginWrapperComponent";
-import LogoLanguage from "@/components/login/LogoLanguageComponent";
+import LoginWrapper from '@/components/login/LoginWrapperComponent';
+import LogoLanguage from '@/components/login/LogoLanguageComponent';
 //import MUI
-import TextField from "@mui/material/TextField";
-import Checkbox from "@mui/material/Checkbox";
-import Button from "@mui/material/Button";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import LockIcon from "@mui/icons-material/Lock";
+import TextField from '@mui/material/TextField';
+import Checkbox from '@mui/material/Checkbox';
+import Button from '@mui/material/Button';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import LockIcon from '@mui/icons-material/Lock';
 //
-import { useState } from "react";
+import { useState } from 'react';
 
-import styles from "../login/login.module.css";
+import styles from '../login/login.module.css';
 
 function Login() {
-  const label = { inputProps: { "aria-label": "Checkbox demo" } };
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   return (
     <LoginWrapper>
@@ -59,11 +59,7 @@ function Login() {
         <Button className="btn form__btnlogin" variant="contained">
           Login now
         </Button>
-        <Button
-          href="/signup"
-          className={styles.form__btnsingup}
-          variant="outlined"
-        >
+        <Button href="/signup" className={styles.form__btnsingup} variant="outlined">
           SingUp Now
         </Button>
       </form>

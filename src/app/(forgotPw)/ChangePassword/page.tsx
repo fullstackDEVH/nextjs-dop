@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
 // import component
-import LoginWrapper from "@/components/login/LoginWrapperComponent";
-import LogoLanguage from "@/components/login/LogoLanguageComponent";
+import LoginWrapper from '@/components/login/LoginWrapperComponent';
+import LogoLanguage from '@/components/login/LogoLanguageComponent';
 
 //import MUI
-import TextField from "@mui/material/TextField";
-import LockIcon from "@mui/icons-material/Lock";
-import Button from "@mui/material/Button";
+import TextField from '@mui/material/TextField';
+import LockIcon from '@mui/icons-material/Lock';
+import Button from '@mui/material/Button';
 
-import styles from "../ChangePassword/changePassword.module.css";
+import styles from '../ChangePassword/changePassword.module.css';
 
 function ChangePassword() {
   return (

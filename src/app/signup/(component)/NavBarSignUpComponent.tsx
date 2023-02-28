@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "@/app/signup/signup.module.css";
+import React from 'react';
+import styles from '@/app/signup/signup.module.css';
 
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 function NavBarSignUp() {
   return (

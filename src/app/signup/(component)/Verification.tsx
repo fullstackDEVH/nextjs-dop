@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "@/app/signup/signup.module.css";
+import React from 'react';
+import styles from '@/app/signup/signup.module.css';
 
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 interface Props {
   handleIncrementStep: () => void;
@@ -38,16 +38,12 @@ function Verification({ handleIncrementStep }: Props) {
           />
           <p className="err"></p>
         </div>
-        <Button
-          className="btn"
-          variant="contained"
-          onClick={handleIncrementStep}
-        >
+        <Button className="btn" variant="contained" onClick={handleIncrementStep}>
           Email Verification
         </Button>
       </div>
     </div>
   );
-};
+}
 
 export default Verification;
