@@ -1,0 +1,66 @@
+.login__form {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+  justify-content: center;
+}
+.form__input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.form__pwinter {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+.pwinter__rememberpw {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.form__buttons {
+  margin-top: 50px;
+}
+.pwinter__rememberpw_text {
+  font-size: 1.4rem;
+  color: var(--gray-color-2);
+}
+.pwinter__forgot {
+  font-size: 1.4rem;
+  color: var(--main-color);
+}
+.gap {
+  padding: 20px 0;
+}
+.gap__text {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #c2c2c2;
+}
+.gap__text::after {
+  content: '';
+  position: absolute;
+  width: 45%;
+  left: 0;
+  height: 2px;
+  background-color: #c2c2c2;
+}
+
+.gap__text::before {
+  content: '';
+  position: absolute;
+  width: 45%;
+  right: 0;
+  height: 2px;
+  background-color: #c2c2c2;
+}

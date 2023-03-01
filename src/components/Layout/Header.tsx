@@ -13,23 +13,23 @@ const Header = () => {
   if (status === 'loading') {
     return <div>Loading...</div>;
   }
-  if (status === 'authenticated') {
-    return (
-      <Box
-        sx={{
-          width: '100%',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}
-      >
-        <Typography variant="h3">My Profile</Typography>
-        {/* <UserInfo avatar={user.avatar} displayName={user.displayName}></UserInfo> */}
-        {/* <p>Signed in as {session.user.email}</p> */}
-      </Box>
-    );
-  }
-  return;
+  // if (status === 'authenticated') {
+  //   return (
+  //     <Box
+  //       sx={{
+  //         width: '100%',
+  //         display: 'flex',
+  //         alignItems: 'center',
+  //         justifyContent: 'space-between',
+  //       }}
+  //     >
+  //       <p>My Profile</p>
+  //       {/* <UserInfo avatar={user.avatar} displayName={user.displayName}></UserInfo> */}
+  //       {/* <p>Signed in as {session.user.email}</p> */}
+  //     </Box>
+  //   );
+  // }
+  return <></>;
 };
 
 export default Header;

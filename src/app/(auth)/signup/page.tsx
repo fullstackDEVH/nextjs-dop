@@ -2,9 +2,12 @@
 import { useState } from 'react';
 import CreateComponent from './(components)/CreateComponent';
 import InformationComponent from './(components)/InformationComponent';
-import VerificationComponent from './(components)/VerificationComponent';
-import StepDoneComponent from './(components)/StepDoneComponent';
-
+import VerificationComponent from '../(components)/VerificationComponent';
+import StepDoneComponent from './(components)/DoneComponent';
+import styles from './signup.module.css';
+import LogoLanguage from '../(components)/HeaderAuth';
+import Grid from '@mui/material/Grid';
+import NavBarComponent from './(components)/NavBarComponent';
 interface Country {
   name: string;
   code: string;
@@ -83,31 +86,30 @@ export default function SignUp() {
     nextStep();
   };
   return (
-    <div
-      style={{
-        width: '100%',
-        minHeight: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      {currentStep === 1 && <CreateComponent onSubmit={handleSubmitCreate}></CreateComponent>}
-      {currentStep === 2 && (
-        <InformationComponent onSubmit={handleSubmitInformation}></InformationComponent>
-      )}
-      {currentStep === 3 && (
-        <VerificationComponent
-          handleChangeCode={handleChangeCode}
-          handleChangeEmail={handleChangeEmail}
-          isDisabledVerifi={isDisabledVerifi}
-          email={email}
-          code={code}
-          handleSendEmail={handleSendEmail}
-          handleVerificationEmail={handleVerificationEmail}
-        ></VerificationComponent>
-      )}
-      {currentStep === 4 && <StepDoneComponent data={dataSignUp}></StepDoneComponent>}
-    </div>
+    <>
+      <Grid container>
+        <Grid item xs={3}>
+          <NavBarComponent />
+        </Grid>
+        <Grid item xs={9}>
+          {currentStep === 1 && <CreateComponent onSubmit={handleSubmitCreate}></CreateComponent>}
+          {currentStep === 2 && (
+            <InformationComponent onSubmit={handleSubmitInformation}></InformationComponent>
+          )}
+          {currentStep === 3 && (
+            <VerificationComponent
+              handleChangeCode={handleChangeCode}
+              handleChangeEmail={handleChangeEmail}
+              isDisabledVerifi={isDisabledVerifi}
+              email={email}
+              code={code}
+              handleSendEmail={handleSendEmail}
+              handleVerificationEmail={handleVerificationEmail}
+            ></VerificationComponent>
+          )}
+          {currentStep === 4 && <StepDoneComponent data={dataSignUp}></StepDoneComponent>}
+        </Grid>
+      </Grid>
+    </>
   );
 }

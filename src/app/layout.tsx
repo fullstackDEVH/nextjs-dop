@@ -23,17 +23,12 @@ export default function RootLayout({ children }: any) {
       <head />
       <body>
         <SessionProvider session={null}>
-          <Header></Header>
-          <main>{children}</main>
-          <Footer></Footer>
+          <ReduxProvider>
+            <Header></Header>
+            <main>{children}</main>
+            <Footer></Footer>
+          </ReduxProvider>
         </SessionProvider>
-        <ReduxProvider>
-          {/* <App>
-              <Header></Header>
-              <main>{children}</main>
-              <Footer></Footer>
-            </App> */}
-        </ReduxProvider>
       </body>
     </html>
   );
