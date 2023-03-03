@@ -40,6 +40,11 @@ html {
   display: block;
   margin-bottom: 10px;
 }
+.form__label::after {
+  content: '*';
+  color: red;
+  margin-left: 2px;
+}
 .input__field {
   display: block;
   width: 100%;
@@ -58,7 +63,7 @@ html {
 }
 .form__input_icon {
   background: var(--main-color);
-  bottom: 0px;
+  top: 0px;
   right: 0px;
   position: absolute;
   border-radius: 8px;
@@ -68,6 +73,22 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.form__input_send {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+  cursor: pointer;
+}
+.form__input_send > span {
+  color: var(--main-color);
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 .form__input_icon-main {
   color: var(--white-color);
@@ -80,7 +101,6 @@ html {
   background-color: var(--main-color);
   color: var(--white-color);
   margin-bottom: 20px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border: none;
   border-radius: 10px;
   font-weight: 500;
@@ -90,6 +110,25 @@ html {
   background-color: var(--white-color);
   border: 1px solid var(--main-color);
   filter: none;
+}
+.btn__auth--next {
+  height: 40px;
+  width: 70px;
+  border-radius: 4px;
+  margin-right: 10px;
+  filter: none;
+  margin-bottom: 0;
+}
+.btn__auth--back {
+  margin-bottom: 0;
+  height: 40px;
+  width: 70px;
+  filter: none;
+  max-width: 100px;
+  border-radius: 4px;
+  background-color: var(--white-color);
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 .btn__auth-signup > a {
   color: var(--main-color);
@@ -106,4 +145,56 @@ html {
 }
 .gap_btn {
   margin-top: 40px;
+}
+.form__input--infomation {
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+  margin-bottom: 10px;
+}
+.form__label--infomation {
+  flex-basis: 25%;
+}
+.form__input-wrapper--infomation {
+  flex-basis: 75%;
+  width: 100%;
+}
+.input__field--information {
+  padding: 10px 15px;
+  font-size: 1.2rem;
+}
+.input__field--information::placeholder {
+  font-size: 1.2rem;
+}
+.signup__title {
+  display: block;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  color: var(--main-color);
+  width: 100%;
+  text-align: center;
+}
+.btn__auth--done {
+  height: 40px;
+  width: 200px;
+  border-radius: 4px;
+  filter: none;
+  margin-bottom: 0;
+}
+.btn__auth--done > a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn__auth.disable {
+  background-color: var(--gray-pale);
+  color: var(--gray-color-2);
+  cursor: not-allowed;
 }

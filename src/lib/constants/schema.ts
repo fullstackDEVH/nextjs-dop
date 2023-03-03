@@ -1,32 +1,41 @@
 import { REGEX_PASSWORD } from './regex';
 import * as yup from 'yup';
 
-export const SCHEMA_INFORMATION = yup.object({
-  sex: yup.string().required('Vui lòng chọn một giới tính').nullable(),
-  country: yup.string().required('Vui lòng chọn 1 quốc gia'),
-  fullName: yup.string().required('Vui lòng nhập đầy đủ họ tên'),
-  address: yup.string().required('Vui lòng nhập địa chỉ'),
-  dateOfBirth: yup.string().required('Vui lòng chọn ngày sinh'),
-  phone: yup.string().required('Vui lòng nhập số điện thoại'),
+const fieldRequired = 'This field is required!';
+export const SCHEMA_SIGNUP = yup.object().shape({
+  fullName: yup.string().required(fieldRequired),
+  address: yup.string().required(fieldRequired),
+  phone: yup.string().required(fieldRequired),
+
+  // sex: yup.string().required(fieldRequired),
+  // country: yup.string().required(fieldRequired),
+  // dateOfBirth: yup.string().required(fieldRequired),
+});
+export const SCHEMA_EMAIL = yup.object({
+  email: yup.string().email('Field should contain a valid e-mail').max(255).required(fieldRequired),
 });
 
-export const SCHEMA_LOGIN = yup
-  .object({
-    username: yup.string().required('Trường này không được để trống'),
-    password: yup.string().required('Trường này không được để trống'),
-  })
-  .required();
+export const SCHEMA_CODE = yup.object({
+  code: yup
+    .number()
+    .test('len', 'Must be exactly 6 characters', (val) => val?.toString().length === 6)
+    .required(fieldRequired),
+});
+export const SCHEMA_LOGIN = yup.object({
+  username: yup.string().required(fieldRequired),
+  password: yup.string().required(fieldRequired),
+});
 export const SCHEMA_CREATE = yup.object({
-  username: yup.string().required('Username không được để trống'),
+  username: yup.string().required(fieldRequired),
   password: yup
     .string()
-    .required('Mật khẩu không được để trống')
+    .required(fieldRequired)
     .matches(
       REGEX_PASSWORD,
-      'Mật khẩu phải nhiều 8 ký tự bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt.'
+      'Password must be 8 characters long, including uppercase letters, lowercase letters, numbers and special characters!'
     ),
   passwordConfirmation: yup
     .string()
-    .required('Vui lòng nhập lại mật khẩu')
-    .oneOf([yup.ref('password')], 'Mật lại nhập khẩu không chính xác'),
+    .required(fieldRequired)
+    .oneOf([yup.ref('password')], 'Password re-entered is incorrect!'),
 });

@@ -1,0 +1,39 @@
+/* form  */
+.changePw__form {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 80px);
+  justify-content: center;
+}
+.changePw__form .form__input {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.changePw__form .form__input .input {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--main-color);
+}
+.changePw__form .form__input label {
+  font-weight: 700;
+}
+
+.changePw__form .forminput__icon {
+  background: var(--main-color);
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  border-radius: 5px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.changePw__form .forminput__icon .icon {
+  color: var(--white-color);
+  font-size: 30px;
+}

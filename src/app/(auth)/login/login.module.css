@@ -46,6 +46,7 @@
   text-align: center;
   position: relative;
   color: #c2c2c2;
+  font-size: 1.4rem;
 }
 .gap__text::after {
   content: '';

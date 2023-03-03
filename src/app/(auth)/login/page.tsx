@@ -13,10 +13,7 @@ import { authActions } from '../authSlice';
 
 import LogoLanguage from '../(components)/HeaderAuth';
 import styles from './login.module.css';
-
-import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
-import Button from '@mui/material/Button';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import LockIcon from '@mui/icons-material/Lock';
 import Link from 'next/link';
@@ -25,33 +22,34 @@ interface IFormInputs {
   password: string;
 }
 export default function Login() {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm<IFormInputs>({
-  //   resolver: yupResolver(SCHEMA_LOGIN),
-  // });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IFormInputs>({
+    resolver: yupResolver(SCHEMA_LOGIN),
+  });
+  const [isLoading, setIsLoading] = useState(false);
   // const router = useRouter();
   // const dispatch = useAppDispatch();
-  // const [isLoading, setIsLoading] = useState(false);
-  // const onSubmit = async (data: IFormInputs) => {
-  //   const { username, password } = data;
-  //   setIsLoading(true);
-  //   try {
-  //     const res: any = await signIn('credentials', {
-  //       username,
-  //       password,
-  //       redirect: false,
-  //     });
-  //     if (res.error) return alert(res.error);
-  //     router.push('/');
-  //   } catch (err: any) {
-  //     console.log(err);
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
+
+  const onSubmit = async (data: IFormInputs) => {
+    const { username, password } = data;
+    // setIsLoading(true);
+    // try {
+    //   const res: any = await signIn('credentials', {
+    //     username,
+    //     password,
+    //     redirect: false,
+    //   });
+    //   if (res.error) return alert(res.error);
+    //   router.push('/');
+    // } catch (err: any) {
+    //   console.log(err);
+    // } finally {
+    //   setIsLoading(false);
+    // }
+  };
   // const onSubmit = async (data: IFormInputs) => {
   //   // const { username, password } = data;
   //   setIsLoading(true);
@@ -97,7 +95,7 @@ export default function Login() {
   return (
     <>
       <LogoLanguage />
-      <form className={styles.login__form}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.login__form}>
         <div className="form__input">
           <label className="form__label" htmlFor="username">
             Username
@@ -108,13 +106,13 @@ export default function Login() {
               id="username"
               placeholder="Enter your username"
               className="input__field"
+              {...register('username')}
             />
             <div className="form__input_icon">
-              {/* <PersonOutl ineIcon className={styles.icon} /> */}
               <PersonOutlineIcon className="form__input_icon-main" />
             </div>
           </div>
-          <p className="form__err">dssd</p>
+          <p className="form__err">{errors.username?.message}</p>
         </div>
         <div className="form__input">
           <label className="form__label" htmlFor="password">
@@ -123,6 +121,7 @@ export default function Login() {
           <div className="form__input-wrapper">
             <input
               autoComplete="true"
+              {...register('password')}
               type="password"
               id="password"
               placeholder="Enter your password"
@@ -132,7 +131,7 @@ export default function Login() {
               <LockIcon className="form__input_icon-main" />
             </div>
           </div>
-          <p className="form__err"></p>
+          <p className="form__err">{errors.password?.message}</p>
         </div>
         <div className={styles.form__pwinter}>
           <div className={styles.pwinter__rememberpw}>
@@ -145,17 +144,19 @@ export default function Login() {
             />
             <span className={styles.pwinter__rememberpw_text}>Remember me</span>
           </div>
-          <Link href="/" className={styles.pwinter__forgot}>
+          <Link href="/forgot" className={styles.pwinter__forgot}>
             Forgot password?
           </Link>
         </div>
         <div className={styles.form__buttons}>
-          <button className="btn__auth">Login Now</button>
+          <button type="submit" className="btn__auth">
+            Login Now
+          </button>
           <div className={styles.gap}>
             <span className={styles.gap__text}>OR</span>
           </div>
           <button className="btn__auth btn__auth-signup">
-            <Link href="/">Signup Now</Link>
+            <Link href="/signup">Signup Now</Link>
           </button>
         </div>
       </form>

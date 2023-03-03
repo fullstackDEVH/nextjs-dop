@@ -1,234 +1,92 @@
 import { ENDPOINT_COUNTRIES_API } from '@/lib/constants';
-import { SCHEMA_INFORMATION } from '@/lib/constants/schema';
 import fetcher from '@/utils/helpers/fetcher';
-import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm } from 'react-hook-form';
 import styles from '../signup.module.css';
 import useSWR from 'swr';
-
 import dayjs, { Dayjs } from 'dayjs';
-import {
-  Button,
-  FormControl,
-  FormControlLabel,
-  InputLabel,
-  MenuItem,
-  Radio,
-  RadioGroup,
-  TextField,
-} from '@mui/material';
+import { FormControlLabel, MenuItem, Radio, RadioGroup, TextField } from '@mui/material';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 interface Country {
   name: any;
   code: string;
 }
-interface IFormInputs {
-  country: string;
-  fullName: string;
-  address: string;
-  sex: string;
-  dateOfBirth: string;
-  phone: string;
-}
 interface Props {
+  register: any;
   onSubmit: any;
+  errors: any;
 }
-export default function InformationComponent({ onSubmit }: Props) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<IFormInputs>({
-    resolver: yupResolver(SCHEMA_INFORMATION),
-  });
 
-  const [valueDay, setValueDay] = useState<Dayjs | null>(dayjs(''));
-  const handleChangeDay = (newValue: Dayjs | null) => {
-    setValueDay(newValue);
-  };
+export default function InformationComponent({ onSubmit, register, errors }: Props) {
+  // const { data, error, isLoading } = useSWR<Country[]>(ENDPOINT_COUNTRIES_API, fetcher);
+  // if (error) {
+  //   return <div>Error loading data</div>;
+  // }
+  // if (!data) {
+  //   return <div>Loading...</div>;
+  // }
 
-  const [country, setCountry] = useState('');
-  const handleChangeCountry = (event: SelectChangeEvent) => {
-    setCountry(event.target.value as string);
-  };
-  const { data, error, isLoading } = useSWR<Country[]>(ENDPOINT_COUNTRIES_API, fetcher);
-  if (error) {
-    return <div>Error loading data</div>;
-  }
-  if (!data) {
-    return <div>Loading...</div>;
-  }
+  // const handleSubmitForm = async (data: IFormInputs) => {
+  //   console.log(data);
+  //   handleNextStep();
+  // };
   return (
-    // <div>
-    //   <h3>BASIC INFORMATION</h3>
-    //   <form action="" onSubmit={handleSubmit(onSubmit)}>
-    //     <div style={{ marginBottom: '20px' }}>
-    //       <label htmlFor="">Country</label>
-    //       <select name="" id="">
-    //         {data.map((country: Country, index) => (
-    //           <option {...register('country')} key={index} value={country.name.common}>
-    //             {country.name.common}
-    //           </option>
-    //         ))}
-    //       </select>
-    //       <p style={{ color: 'red', marginTop: '10px' }}>{errors.country?.message}</p>
-    //     </div>
-    //     <div style={{ marginBottom: '20px' }}>
-    //       <label htmlFor="">Fullname</label>
-    //       <input {...register('fullName')} type="text" placeholder="Enter your fullname" />
-    //       <p style={{ color: 'red', marginTop: '10px' }}>{errors.fullName?.message}</p>
-    //     </div>
-    //     <div style={{ marginBottom: '20px' }}>
-    //       <label htmlFor="">Address</label>
-    //       <input {...register('address')} type="text" placeholder="Enter your address" />
-    //       <p style={{ color: 'red', marginTop: '10px' }}>{errors.address?.message}</p>
-    //     </div>
-    //     <div style={{ display: 'flex', gap: '0 20px', marginBottom: '20px' }}>
-    //       <p>Sex</p>
-    //       <div>
-    //         <label htmlFor="male">Male</label>
-    //         <input {...register('sex')} type="radio" id="male" name="sex" value="male" />
-    //       </div>
-    //       <div>
-    //         <label htmlFor="fmale">Female</label>
-    //         <input {...register('sex')} type="radio" id="fmale" name="sex" value="fmale" />
-    //       </div>
-    //       <p style={{ color: 'red', marginTop: '10px' }}>{errors.sex?.message}</p>
-    //     </div>
-    //     <div style={{ marginBottom: '20px' }}>
-    //       <label htmlFor="">DateOfBirth</label>
-    //       <input {...register('dateOfBirth')} type="date" />
-    //       <p style={{ color: 'red', marginTop: '10px' }}>{errors.dateOfBirth?.message}</p>
-    //     </div>
-    //     <div style={{ marginBottom: '20px' }}>
-    //       <label htmlFor="">Phone</label>
-    //       <input {...register('phone')} type="number" placeholder="Enter your phone number" />
-    //       <p style={{ color: 'red', marginTop: '10px' }}>{errors.phone?.message}</p>
-    //     </div>
-    //     <button type="submit">Submit</button>
-    //   </form>
-    // </div>
-    <div className={styles.signup__content}>
-      <div className={styles.signup__title}>BASIC INFORMATION</div>
-      <div className={styles.signup__form}>
-        <div className="form__input">
-          <label className="form__label" htmlFor="country">
-            Country
-          </label>
-          <div className="form__input-wrapper">
-            <InputLabel id="demo-simple-select-filled-label">Choose your country</InputLabel>
-            <Select
-              labelId="demo-simple-select-filled-label"
-              id="demo-simple-select-filled"
-              value={country}
-              onChange={handleChangeCountry}
-            >
-              <MenuItem value="">
-                <em>Choose your country</em>
-              </MenuItem>
-              <MenuItem value={10}>Viet Nam</MenuItem>
-              <MenuItem value={20}>American</MenuItem>
-              <MenuItem value={30}>Korea</MenuItem>
-            </Select>
-            <p className="form__err"></p>
-          </div>
-        </div>
-
-        <div className="form__input">
-          <label className="form__label" htmlFor="fullName">
+    <Fragment>
+      <div className="signup__title">BASIC INFORMATION</div>
+      <form onSubmit={onSubmit} className={styles.signup__form}>
+        <div className="form__input form__input--infomation">
+          <label className="form__label form__label--infomation" htmlFor="fullName">
             Fullname
           </label>
-          <div className="form__input-wrapper">
+          <div className="form__input-wrapper form__input-wrapper--infomation">
             <input
-              autoComplete="true"
               id="fullName"
+              {...register('fullName')}
+              name="fullName"
               placeholder="Enter your fullname"
-              className="input__field"
+              className="input__field input__field--information"
             />
-            <p className="form__err"></p>
+            {errors.fullName && <p className="form__err">{errors.fullName.message}</p>}
           </div>
         </div>
-
-        <div className="form__input">
-          <label className="form__label" htmlFor="address">
+        <div className="form__input form__input--infomation">
+          <label className="form__label form__label--infomation" htmlFor="address">
             Address
           </label>
-          <div className="form__input-wrapper">
+          <div className="form__input-wrapper form__input-wrapper--infomation">
             <input
-              autoComplete="true"
               id="address"
+              {...register('address')}
+              name="address"
               placeholder="Enter your address"
-              className="input__field"
+              className="input__field input__field--information"
             />
-            <p className="form__err"></p>
+            {errors.address && <p className="form__err">{errors.address.message}</p>}
           </div>
         </div>
-
-        <div className="form__input">
-          <label className="form__label" htmlFor="sex">
-            Sex
-          </label>
-          <div className="form__input-wrapper">
-            <RadioGroup
-              className={styles.radio}
-              row
-              aria-labelledby="demo-row-radio-buttons-group-label"
-              name="row-radio-buttons-group"
-            >
-              <FormControlLabel value="female" control={<Radio />} label="Female" />
-              <FormControlLabel value="male" control={<Radio />} label="Male" />
-              <FormControlLabel value="other" control={<Radio />} label="Other" />
-            </RadioGroup>
-            <p className="form__err"></p>
-          </div>
-        </div>
-
-        <div className="form__input">
-          <label className="form__label" htmlFor="dateOfBirth">
-            Date Of Birth
-          </label>
-          <div className="form__input-wrapper">
-            <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DesktopDatePicker
-                className={styles.input}
-                inputFormat="MM/DD/YYYY"
-                value={valueDay}
-                onChange={handleChangeDay}
-                renderInput={(params: any) => <TextField {...params} />}
-              />
-            </LocalizationProvider>
-            <p className="form__err"></p>
-          </div>
-        </div>
-
-        <div className="form__input">
-          <label className="form__label" htmlFor="phoneNumber">
+        <div className="form__input form__input--infomation">
+          <label className="form__label form__label--infomation" htmlFor="phone">
             Phone Number
           </label>
-
-          <div className="form__input-wrapper">
+          <div className="form__input-wrapper form__input-wrapper--infomation">
             <input
-              autoComplete="true"
-              id="phoneNumber"
+              id="phone"
+              {...register('phone')}
+              name="phone"
               placeholder="Enter your phone number"
-              className="input__field"
-              type="number"
+              className="input__field input__field--information"
             />
-            <p className="form__err"></p>
+            {errors.phone && <p className="form__err">{errors.phone.message}</p>}
           </div>
         </div>
-
-        <div>
-          <button className="btn__auth">Signup Now</button>
+        <div className={styles.form__btns}>
+          <button type="submit" className="btn__auth btn__auth--next">
+            Next
+          </button>
         </div>
-        {/* <Button className="btn" variant="contained" onClick={handleIncrementStep}>
-          Signup Now
-        </Button> */}
-      </div>
-    </div>
+      </form>
+    </Fragment>
   );
 }
