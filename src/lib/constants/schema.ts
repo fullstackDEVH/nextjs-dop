@@ -14,7 +14,6 @@ export const SCHEMA_SIGNUP = yup.object().shape({
 export const SCHEMA_EMAIL = yup.object({
   email: yup.string().email('Field should contain a valid e-mail').max(255).required(fieldRequired),
 });
-
 export const SCHEMA_CODE = yup.object({
   code: yup
     .number()
@@ -38,4 +37,15 @@ export const SCHEMA_CREATE = yup.object({
     .string()
     .required(fieldRequired)
     .oneOf([yup.ref('password')], 'Password re-entered is incorrect!'),
+});
+export const SCHEMA_CREATE_PROJECT = yup.object().shape({
+  name: yup.string().required(fieldRequired),
+  description: yup.string().required(fieldRequired),
+  // image: yup
+  //   .mixed()
+  //   .required(fieldRequired)
+  //   .test('fileType', 'Only image files are allowed', (value: any) => {
+  //     if (!value) return true; // attachment is optional
+  //     return ['image/jpeg', 'image/png', 'image/gif'].includes(value.type);
+  //   }),
 });

@@ -1,0 +1,132 @@
+.header__user {
+  background-color: var(--main-color);
+  height: var(--height-header-profile);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__user__logo {
+  flex: 1 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__user__container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: flex-end;
+}
+
+.header__user__container p {
+  font-size: 0.95rem;
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.header__user__container h3 {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+/*  */
+.header__user__controller {
+  padding-right: 4rem;
+}
+
+.header__user__controller__detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__user__controller__detail > .solid {
+  width: 1px;
+  height: 30px;
+  background-color: var(--color-white);
+  display: inline-block;
+}
+
+.header__user_controller__detail_contain {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+}
+
+.header__user_controller__detail_contain > span {
+  color: var(--color-white);
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+/* drop down */
+.header__user_controller__detail_contain__drop_down {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 90%;
+
+  border-radius: 4px;
+
+  background-color: white;
+
+  padding: 0 0.5rem;
+
+  transition: all 0.3 ease-in-out;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.header__user_controller__detail_contain__drop_down.show {
+  height: max-content;
+  opacity: 1;
+}
+
+.contain__drop_down__item {
+  width: 100%;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.contain__drop_down__item:hover {
+  opacity: 0.8;
+}
+
+.contain__drop_down__item + .contain__drop_down__item {
+  border-top: 1px solid var(--main-color);
+}
+
+.contain__drop_down__item > svg {
+  color: var(--main-color);
+}
+
+.contain__drop_down__item > p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--main-color);
+}
+
+/* language */
+.header__user_controller__language {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header__user_controller__language > span {
+  color: var(--color-white);
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1.4rem;
+}

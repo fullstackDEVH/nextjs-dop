@@ -2,7 +2,7 @@ import { useAppSelector } from '@/redux/hooks';
 import { signOut, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { selectCurrentUser } from './(auth)/authSlice';
-
+import './page.module.css';
 export default function App() {
   // const currentUser = useAppSelector(selectCurrentUser);
   // const { data: session, status }: any = useSession();

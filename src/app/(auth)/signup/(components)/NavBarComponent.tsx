@@ -2,12 +2,12 @@ import styles from '../signup.module.css';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@/static/imgs/VBPO_Logo.png';
+
 const NavBarComponent = () => {
   return (
     <div className={styles.navbar}>
       <div className={styles.navbar__header}>
-        <Image src={Logo} alt="Logo" height={52} />
+        <Image src="/VBPO_Logo.png" alt="Logo" height={52} width={100} />
       </div>
       <div className={styles.navbar__content}>
         <div className={styles.step}>

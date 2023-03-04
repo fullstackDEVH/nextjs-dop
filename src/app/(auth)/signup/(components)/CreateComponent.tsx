@@ -2,9 +2,6 @@ import styles from '../signup.module.css';
 import { Fragment } from 'react';
 import LockIcon from '@mui/icons-material/Lock';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
 interface Props {
   register: any;
   onSubmit: any;

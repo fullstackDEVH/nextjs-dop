@@ -1,3 +1,4 @@
 import useCountDown from './useCountDown';
 import useValidateForm from './useValidateForm';
-export { useCountDown, useValidateForm };
+import useLocalStorage from './useLocalStorage';
+export { useCountDown, useValidateForm, useLocalStorage };

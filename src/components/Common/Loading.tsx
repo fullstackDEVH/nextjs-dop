@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 import { Box } from '@mui/system';
 import { CircularProgress } from '@mui/material';
-interface Props {
-  isLoading: boolean;
-}
 
-const Loading = ({ isLoading }: Props) => {
+const Loading = () => {
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        position: 'fixed',
+        width: '1000px',
+        minHeight: '620px',
+      }}
+    >
       <Box
         sx={{
-          display: `${isLoading ? 'flex' : 'none'}`,
-          position: 'fixed',
-          top: '50%',
-          left: '50%',
+          position: 'absolute',
         }}
       >
         <CircularProgress />

@@ -1,25 +1,13 @@
-// export default function LayoutAuth({ children }: any) {
-//   return (
-//     <>
-//       <head />
-//       <header>Header</header>
-//       <main>{children}</main>
-//       <footer>Footer</footer>
-//     </>
-//   );
-// }
-
 import { ReactNode } from 'react';
 import styles from './layout.module.css';
-import bg from '@/static/imgs/bg1.png';
-type LoginWrapperProps = {
+type Props = {
   children: ReactNode;
 };
-function LayoutAuth({ children }: LoginWrapperProps) {
+function LayoutAuth({ children }: Props) {
   return (
     <div
       style={{
-        backgroundImage: `url(${bg.src})`,
+        backgroundImage: 'url(/bg1.png)',
       }}
       className={styles.auth__wrapper}
     >

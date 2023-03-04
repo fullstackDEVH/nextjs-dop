@@ -1,9 +1,5 @@
 import React from 'react';
 import styles from '../signup.module.css';
-
-import Button from '@mui/material/Button';
-import Img from '@/static/imgs/mail.png';
-import Image from 'next/image';
 import Link from 'next/link';
 import Typography from '@mui/material/Typography';
 import DoneIcon from '@mui/icons-material/Done';

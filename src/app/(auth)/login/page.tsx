@@ -17,6 +17,7 @@ import Checkbox from '@mui/material/Checkbox';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import LockIcon from '@mui/icons-material/Lock';
 import Link from 'next/link';
+import LayoutAuth from '../layout';
 interface IFormInputs {
   username: string;
   password: string;
@@ -30,11 +31,22 @@ export default function Login() {
     resolver: yupResolver(SCHEMA_LOGIN),
   });
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
   // const router = useRouter();
   // const dispatch = useAppDispatch();
 
   const onSubmit = async (data: IFormInputs) => {
     const { username, password } = data;
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      if (username == 'admin' && password == 'admin') {
+        window.location.href = '/';
+        return;
+      }
+      alert('User not found!');
+    }, 2000);
+
     // setIsLoading(true);
     // try {
     //   const res: any = await signIn('credentials', {
@@ -96,6 +108,8 @@ export default function Login() {
     <>
       <LogoLanguage />
       <form onSubmit={handleSubmit(onSubmit)} className={styles.login__form}>
+        {/* {isLoading && <Loading></Loading>} */}
+        {isLoading && <p>Loading...</p>}
         <div className="form__input">
           <label className="form__label" htmlFor="username">
             Username

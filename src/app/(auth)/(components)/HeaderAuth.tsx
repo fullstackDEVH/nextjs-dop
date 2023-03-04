@@ -2,13 +2,12 @@
 
 import PublicIcon from '@mui/icons-material/Public';
 import styles from '../layout.module.css';
-import Logo from '@/static/imgs/VBPO_Logo.png';
 import Image from 'next/image';
 function HeaderAuth() {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
-        <Image src={Logo} alt="Logo" height={52} />
+        <Image src="/VBPO_Logo.png" alt="Logo" height={52} width={100} />
       </div>
       <div className={styles.language}>
         <PublicIcon className={styles.language__icon} />
