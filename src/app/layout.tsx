@@ -43,10 +43,10 @@ export default function RootLayout({ children }: Props) {
                   backgroundSize: 'cover',
                 }}
               >
-                <Grid item xs={1}>
+                <Grid item xs={1.5}>
                   <SideBar />
                 </Grid>
-                <Grid item xs={11}>
+                <Grid item xs={10.5}>
                   <main className="container__content">{children}</main>
                 </Grid>
               </Grid>

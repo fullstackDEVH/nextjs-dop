@@ -11,26 +11,22 @@ interface ISidebar {
 
 const SIDE_BAR: ISidebar[] = [
   {
-    name: 'TASK',
-    link: '/task',
+    name: 'Dashboard',
+    link: '/',
     sub_item: [
       {
-        sub_name: 'Open Task',
-        sub_link: '/open-task',
+        sub_name: 'My Projects',
+        sub_link: '/project',
       },
       {
-        sub_name: 'My PFM',
-        sub_link: '/pfm',
-      },
-      {
-        sub_name: 'My Task',
-        sub_link: '/pfm',
+        sub_name: 'My Tasks',
+        sub_link: '/tasks',
       },
     ],
   },
   {
-    name: 'ACCOUNT',
-    link: '/account',
+    name: 'Account',
+    link: '/me',
     sub_item: [],
   },
 ];

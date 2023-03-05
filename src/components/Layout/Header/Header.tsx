@@ -11,6 +11,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import { useState } from 'react';
+import Link from 'next/link';
 const AVATAR = 'https://mui.com/static/images/avatar/1.jpg';
 const Header = () => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -40,9 +41,15 @@ const Header = () => {
   return (
     <header>
       <div className={styles.header__user}>
-        <div className={styles.header__user__logo}>
-          <Image src="/logo.png" alt="img" width={70} height={62} style={{ marginLeft: '4rem' }} />
-        </div>
+        <Link href="/" className={styles.header__user__logo}>
+          <Image
+            src="/VBPO_Logo.png"
+            alt="logo"
+            width={75}
+            height={45}
+            style={{ marginLeft: '4rem' }}
+          />
+        </Link>
         <div className={styles.header__user__container}>
           <div className={styles.header__user__controller}>
             <div className={styles.header__user__controller__detail}>

@@ -4,18 +4,20 @@ import EmptyData from '@/components/Common/EmptyData';
 import { useLocalStorage } from '@/hooks';
 import { Grid, Stack, Pagination } from '@mui/material';
 import Link from 'next/link';
-import './project.module.css';
-
-export default function Project() {
-  const storage = useLocalStorage('projects');
+import './job.module.css';
+import { usePathname } from 'next/navigation';
+export default function Job() {
+  const pathname = usePathname();
+  const storage = useLocalStorage('jobs');
   if (storage === undefined) {
     return <div>Loading...</div>;
   }
+
   return (
     <div className="wrapper__content">
       <div className="main__content-heading">
-        <Link className="link" href="/project/create">
-          <button className="button">New Project</button>
+        <Link className="link" href={`${pathname}/create`}>
+          <button className="button">New Job</button>
         </Link>
       </div>
       {storage.length > 0 ? (
@@ -24,9 +26,9 @@ export default function Project() {
             {storage.map((item: any, index: number) => (
               <Grid key={index} item xs={4}>
                 <CardItem
-                  slug={`project/${item.slug} `}
+                  slug="tasks"
+                  // slug={item.slug}
                   cardName={item.name}
-                  cardImage={item.image}
                   cardDescription={item.description}
                 ></CardItem>
               </Grid>

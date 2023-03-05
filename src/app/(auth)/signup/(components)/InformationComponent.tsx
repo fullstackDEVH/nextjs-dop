@@ -2,13 +2,8 @@ import { ENDPOINT_COUNTRIES_API } from '@/lib/constants';
 import fetcher from '@/utils/helpers/fetcher';
 import styles from '../signup.module.css';
 import useSWR from 'swr';
-import dayjs, { Dayjs } from 'dayjs';
-import { FormControlLabel, MenuItem, Radio, RadioGroup, TextField } from '@mui/material';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { useState, Fragment } from 'react';
+import { Fragment } from 'react';
 interface Country {
   name: any;
   code: string;

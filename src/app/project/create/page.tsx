@@ -7,7 +7,9 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
-
+import Link from 'next/link';
+import { Stack } from '@mui/material/';
+import { useRouter } from 'next/navigation';
 interface IFormInputs {
   name: string;
   description: string;
@@ -21,6 +23,7 @@ export default function CreateProject() {
     resolver: yupResolver(SCHEMA_CREATE_PROJECT),
   });
   const [file, setFile] = useState('');
+  const router = useRouter();
   const { getRootProps, getInputProps } = useDropzone({
     onDrop: (acceptedFiles) => {
       const getFile: any = acceptedFiles.map((file: any) => URL.createObjectURL(file));
@@ -44,7 +47,6 @@ export default function CreateProject() {
   //   return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
   // }, [files]);
   const storage = useLocalStorage('projects');
-  console.log(storage);
   const onSubmit = async (data: IFormInputs) => {
     const convertData = {
       ...data,
@@ -53,6 +55,8 @@ export default function CreateProject() {
     };
     storage.push(convertData);
     localStorage.setItem('projects', JSON.stringify(storage));
+    alert('Create task successfully');
+    router.back();
   };
   return (
     <WrapperForm title="Create new project">
@@ -108,11 +112,16 @@ export default function CreateProject() {
             {/* {errors.image && <p className="form__err">{errors.image.message}</p>} */}
           </div>
         </div>
-        <div>
-          <button type="submit" className="btn__auth">
+        <Stack direction="row" alignItems="center" justifyContent="space-between" columnGap={2}>
+          <Link href="/project" style={{ display: 'block', flex: '1' }}>
+            <button style={{ cursor: 'pointer' }} className="btn__auth disable">
+              Cancel
+            </button>
+          </Link>
+          <button type="submit" className="btn__auth" style={{ flex: '1' }}>
             Create project
           </button>
-        </div>
+        </Stack>
       </form>
     </WrapperForm>
   );

@@ -5,12 +5,17 @@ import { Stack, Typography, Avatar } from '@mui/material/';
 import Link from 'next/link';
 interface Props {
   cardName: string;
-  cardImage: string;
+  cardImage?: string;
   cardDescription: string;
   slug: string;
 }
 
-const CardItem = ({ cardName, cardImage, cardDescription, slug }: Props) => {
+const CardItem = ({
+  cardName,
+  cardImage = '/job_bg_default.png',
+  cardDescription,
+  slug,
+}: Props) => {
   const AUTHOR_NAME = 'David';
   return (
     <Link href={`/${slug}`} className={styles.link}>

@@ -2,9 +2,11 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import CircleIcon from '@mui/icons-material/Circle';
 import styles from './sideBarItem.module.css';
 import PersonIcon from '@mui/icons-material/Person';
+import Link from 'next/link';
 
 interface ISubItem {
   sub_name: string;
+  sub_link: string;
 }
 
 interface Props {
@@ -40,11 +42,17 @@ const SideBarItem: React.FC<Props> = ({
       </div>
 
       <div className={styles.side_bar__sub__list}>
-        {sub_item?.map(({ sub_name }, index) => (
-          <div className={styles.side_bar__sub__item} key={sub_name + index}>
-            <CircleIcon style={{ fontSize: '8', color: 'white' }} />
-            <div className={styles.side_bar__sub__item__name}>{sub_name}</div>
-          </div>
+        {sub_item?.map(({ sub_name, sub_link }, index) => (
+          <Link
+            style={{ textDecoration: 'none', color: '#FFF' }}
+            key={sub_name + index}
+            href={`${sub_link}`}
+          >
+            <div className={styles.side_bar__sub__item}>
+              {/* <CircleIcon style={{ fontSize: '8', color: 'white' }} /> */}
+              <div className={styles.side_bar__sub__item__name}>{sub_name}</div>
+            </div>
+          </Link>
         ))}
       </div>
     </div>

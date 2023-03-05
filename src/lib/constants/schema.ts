@@ -49,3 +49,17 @@ export const SCHEMA_CREATE_PROJECT = yup.object().shape({
   //     return ['image/jpeg', 'image/png', 'image/gif'].includes(value.type);
   //   }),
 });
+
+export const SCHEMA_CREATE_JOB = yup.object().shape({
+  name: yup.string().required(fieldRequired),
+  description: yup.string().required(fieldRequired),
+  quantityWorker: yup.string().required(fieldRequired),
+});
+
+export const SCHEMA_CREATE_TASK = yup.object().shape({
+  name: yup.string().required(fieldRequired),
+  description: yup.string().required(fieldRequired),
+  quantityEntry: yup.string().required(fieldRequired),
+  quantityChecker: yup.string().required(fieldRequired),
+  quantityLastChecker: yup.string().required(fieldRequired),
+});
