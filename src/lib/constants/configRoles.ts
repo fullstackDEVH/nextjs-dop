@@ -7,7 +7,6 @@ export interface Color {
     QA: string;
   }
 
-  
 
 export const initialNodes: Node[] = [
   {
