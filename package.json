@@ -15,10 +15,14 @@
     "@hookform/resolvers": "^2.9.11",
     "@mui/icons-material": "^5.11.9",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@mui/joy": "^5.0.0-alpha.69",
 =======
     "@mui/joy": "^5.0.0-alpha.68",
 >>>>>>> 1ab1764 (change)
+=======
+    "@mui/joy": "^5.0.0-alpha.68",
+>>>>>>> 5ce9085 (feat: design profile user)
     "@mui/material": "^5.11.9",
     "@mui/x-date-pickers": "^5.0.20",
     "@next/font": "13.1.6",

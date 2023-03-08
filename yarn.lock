@@ -282,6 +282,7 @@
     "@babel/runtime" "^7.20.13"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@mui/joy@^5.0.0-alpha.69":
   version "5.0.0-alpha.69"
   resolved "https://registry.yarnpkg.com/@mui/joy/-/joy-5.0.0-alpha.69.tgz#14334af818185e4c04d8d8cf0362af589cb8b716"
@@ -294,6 +295,8 @@
     "@mui/types" "^7.2.3"
     "@mui/utils" "^5.11.11"
 =======
+=======
+>>>>>>> 5ce9085 (feat: design profile user)
 "@mui/joy@^5.0.0-alpha.68":
   version "5.0.0-alpha.68"
   resolved "https://registry.yarnpkg.com/@mui/joy/-/joy-5.0.0-alpha.68.tgz#5d22e786901d253fa4667bdc3a6c61f954b5284c"
@@ -305,7 +308,10 @@
     "@mui/system" "^5.11.9"
     "@mui/types" "^7.2.3"
     "@mui/utils" "^5.11.9"
+<<<<<<< HEAD
 >>>>>>> 1ab1764 (change)
+=======
+>>>>>>> 5ce9085 (feat: design profile user)
     clsx "^1.2.1"
     csstype "^3.1.1"
     prop-types "^15.8.1"
