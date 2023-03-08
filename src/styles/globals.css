@@ -1,5 +1,6 @@
 :root {
   --font-family: 'Roboto', sans-serif;
+<<<<<<< HEAD
   --background-gray: #f1f1f5;
   --white-color: #fff;
   --gray-color: #767676;
@@ -34,6 +35,39 @@ html {
 /* Huy wrong here */
 .MuiRadio-icon {
   color: var(--main-color);
+=======
+  --main-color : #1BADDE;
+  --main-text : #555555;
+  --color-white : #ffffff;
+  --height-header-profile : 80px;
+
+  
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.MuiRadio-icon {
+  color : var(--main-color);
+>>>>>>> 1ab1764 (change)
 }
 
 .css-19vqqfw-MuiContainer-root {
@@ -41,6 +75,7 @@ html {
   padding-right: 0 !important;
 }
 
+<<<<<<< HEAD
 .css-1d3x0vt-MuiFormControl-root-MuiTextField-root {
   border-radius: 0.6rem;
 }
@@ -288,3 +323,9 @@ input::-webkit-inner-spin-button {
   font-size: 1.6rem;
   cursor: pointer;
 }
+=======
+
+.css-1d3x0vt-MuiFormControl-root-MuiTextField-root {
+  border-radius: 0.6rem;
+}
+>>>>>>> 1ab1764 (change)

@@ -280,6 +280,7 @@
   dependencies:
     "@babel/runtime" "^7.20.13"
 
+<<<<<<< HEAD
 "@mui/joy@^5.0.0-alpha.69":
   version "5.0.0-alpha.69"
   resolved "https://registry.yarnpkg.com/@mui/joy/-/joy-5.0.0-alpha.69.tgz#14334af818185e4c04d8d8cf0362af589cb8b716"
@@ -291,6 +292,19 @@
     "@mui/system" "^5.11.11"
     "@mui/types" "^7.2.3"
     "@mui/utils" "^5.11.11"
+=======
+"@mui/joy@^5.0.0-alpha.68":
+  version "5.0.0-alpha.68"
+  resolved "https://registry.yarnpkg.com/@mui/joy/-/joy-5.0.0-alpha.68.tgz#5d22e786901d253fa4667bdc3a6c61f954b5284c"
+  integrity sha512-tSmrxnDFzjoiFd2kRt1zeW7OjEI8caQo7BgDx/jf8JtwswFz6rq+/sKmALpkOVV9UXYd3hdGHM3o4IqRXgFqtw==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    "@mui/base" "5.0.0-alpha.118"
+    "@mui/core-downloads-tracker" "^5.11.9"
+    "@mui/system" "^5.11.9"
+    "@mui/types" "^7.2.3"
+    "@mui/utils" "^5.11.9"
+>>>>>>> 1ab1764 (change)
     clsx "^1.2.1"
     csstype "^3.1.1"
     prop-types "^15.8.1"
