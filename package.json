@@ -44,10 +44,14 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-dropzone": "^14.2.3",
 =======
     "react-draggable": "^4.4.5",
 >>>>>>> 4bc6fea (feat : builder config roles)
+=======
+    "react-draggable": "^4.4.5",
+>>>>>>> 7c453b5 (feat : builder config roles)
     "react-hook-form": "^7.43.2",
     "react-redux": "^8.0.5",
     "reactflow": "^11.5.6",

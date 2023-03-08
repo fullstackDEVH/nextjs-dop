@@ -336,8 +336,11 @@ input::-webkit-inner-spin-button {
   border-radius: 0.6rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1ab1764 (change)
 =======
+=======
+>>>>>>> 7c453b5 (feat : builder config roles)
 
   
 .react-flow__handle.target{
@@ -354,6 +357,7 @@ input::-webkit-inner-spin-button {
   bottom: -6px;
   width: 10px;
   height: 10px;
+<<<<<<< HEAD
 }
 >>>>>>> 4bc6fea (feat : builder config roles)
 =======
@@ -362,3 +366,6 @@ input::-webkit-inner-spin-button {
   border-radius: 0.6rem;
 }
 >>>>>>> 5ce9085 (feat: design profile user)
+=======
+}
+>>>>>>> 7c453b5 (feat : builder config roles)
