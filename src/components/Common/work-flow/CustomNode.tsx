@@ -1,6 +1,6 @@
 'use client';
 
-import { Color, Colors } from '@/constants/configRoles';
+import { Color, Colors } from '@/lib/constants/configRoles';
 import { memo, FC, CSSProperties } from 'react';
 import { Handle, Position, NodeProps } from 'reactflow';
 

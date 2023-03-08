@@ -14,15 +14,7 @@
     "@fontsource/roboto": "^4.5.8",
     "@hookform/resolvers": "^2.9.11",
     "@mui/icons-material": "^5.11.9",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "@mui/joy": "^5.0.0-alpha.69",
-=======
     "@mui/joy": "^5.0.0-alpha.68",
->>>>>>> 1ab1764 (change)
-=======
-    "@mui/joy": "^5.0.0-alpha.68",
->>>>>>> 5ce9085 (feat: design profile user)
     "@mui/material": "^5.11.9",
     "@mui/x-date-pickers": "^5.0.20",
     "@next/font": "13.1.6",
@@ -43,21 +35,15 @@
     "next-auth": "^4.19.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
+    "react-draggable": "^4.4.5",
     "react-dropzone": "^14.2.3",
-=======
-    "react-draggable": "^4.4.5",
->>>>>>> 4bc6fea (feat : builder config roles)
-=======
-    "react-draggable": "^4.4.5",
->>>>>>> 7c453b5 (feat : builder config roles)
     "react-hook-form": "^7.43.2",
     "react-redux": "^8.0.5",
     "reactflow": "^11.5.6",
     "redux-saga": "^1.2.2",
     "swr": "^2.0.3",
     "typescript": "4.9.5",
+    "yarn": "^1.22.19",
     "yup": "^1.0.0"
   },
   "devDependencies": {

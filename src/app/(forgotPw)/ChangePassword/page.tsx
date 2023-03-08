@@ -1,8 +1,8 @@
 'use client';
 
 // import component
-import LoginWrapper from '@/components/login/LoginWrapperComponent';
-import LogoLanguage from '@/components/login/LogoLanguageComponent';
+import LoginWrapper from '@/components/Common/login/LoginWrapperComponent';
+import LogoLanguage from '@/components/Common/login/LogoLanguageComponent';
 
 //import MUI
 import TextField from '@mui/material/TextField';

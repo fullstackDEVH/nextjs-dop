@@ -1,6 +1,6 @@
 'use client';
 
-import { Color, Colors, initialEdges, initialNodes } from '@/constants/configRoles';
+import { Color, Colors, initialEdges, initialNodes } from '@/lib/constants/configRoles';
 import { DragEvent, useCallback, useEffect, useRef, useState } from 'react';
 import ReactFlow, {
   Node,

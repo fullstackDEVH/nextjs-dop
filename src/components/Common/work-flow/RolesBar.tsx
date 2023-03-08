@@ -1,4 +1,4 @@
-import { Colors } from '@/constants/configRoles';
+import { Colors } from '@/lib/constants/configRoles';
 import { Button } from '@mui/material';
 import { DragEvent } from 'react';
 import DialogConfirm from './Diaglog';

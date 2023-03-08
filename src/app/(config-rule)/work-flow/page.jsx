@@ -1,7 +1,7 @@
 'use client'
 
-import Flow from '../../../components/work-flow/Flow';
-import RolesBar from '../../../components/work-flow/RolesBar';
+import Flow from '@/components/Common/work-flow/Flow';
+import RolesBar from '@/components/Common/work-flow/RolesBar';
 
 import styles from './work-flow.module.css';
 

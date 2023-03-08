@@ -30,6 +30,8 @@ export default function CreateProject() {
       setFile(getFile[0]);
     },
   });
+
+  const [step, setStep] = useState<number>(0);
   // const thumbs = files.map((file) => (
   //   <div key={file.name}>
   //     <div>
@@ -47,6 +49,7 @@ export default function CreateProject() {
   //   return () => files.forEach((file) => URL.revokeObjectURL(file.preview));
   // }, [files]);
   const storage = useLocalStorage('projects');
+
   const onSubmit = async (data: IFormInputs) => {
     const convertData = {
       ...data,
@@ -56,8 +59,13 @@ export default function CreateProject() {
     storage.push(convertData);
     localStorage.setItem('projects', JSON.stringify(storage));
     alert('Create task successfully');
-    router.back();
+    // router.back();
   };
+
+  const handleNextStep = () => {
+    setStep(pre => pre + 1);
+  };
+
   return (
     <WrapperForm title="Create new project">
       <form onSubmit={handleSubmit(onSubmit)} className="form__app-container">
@@ -118,8 +126,8 @@ export default function CreateProject() {
               Cancel
             </button>
           </Link>
-          <button type="submit" className="btn__auth" style={{ flex: '1' }}>
-            Create project
+          <button type="submit" className="btn__auth" style={{ flex: '1' }} onClick={handleNextStep}>
+            Next Step
           </button>
         </Stack>
       </form>

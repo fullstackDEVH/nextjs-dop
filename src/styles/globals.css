@@ -1,7 +1,5 @@
 :root {
   --font-family: 'Roboto', sans-serif;
-<<<<<<< HEAD
-<<<<<<< HEAD
   --background-gray: #f1f1f5;
   --white-color: #fff;
   --gray-color: #767676;
@@ -33,12 +31,10 @@ html {
   font-size: 62.5%;
   line-height: 1.6rem;
 }
+
 /* Huy wrong here */
 .MuiRadio-icon {
   color: var(--main-color);
-=======
-=======
->>>>>>> 5ce9085 (feat: design profile user)
   --main-color : #1BADDE;
   --main-text : #555555;
   --color-white : #ffffff;
@@ -70,10 +66,6 @@ a {
 
 .MuiRadio-icon {
   color : var(--main-color);
-<<<<<<< HEAD
->>>>>>> 1ab1764 (change)
-=======
->>>>>>> 5ce9085 (feat: design profile user)
 }
 
 .css-19vqqfw-MuiContainer-root {
@@ -81,8 +73,6 @@ a {
   padding-right: 0 !important;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .css-1d3x0vt-MuiFormControl-root-MuiTextField-root {
   border-radius: 0.6rem;
 }
@@ -330,17 +320,11 @@ input::-webkit-inner-spin-button {
   font-size: 1.6rem;
   cursor: pointer;
 }
-=======
 
 .css-1d3x0vt-MuiFormControl-root-MuiTextField-root {
   border-radius: 0.6rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1ab1764 (change)
-=======
-=======
->>>>>>> 7c453b5 (feat : builder config roles)
+
 
   
 .react-flow__handle.target{
@@ -348,7 +332,6 @@ input::-webkit-inner-spin-button {
   width: 10px;
   height: 10px;
   top: -5px;
-
 }
 
   
@@ -357,15 +340,8 @@ input::-webkit-inner-spin-button {
   bottom: -6px;
   width: 10px;
   height: 10px;
-<<<<<<< HEAD
 }
->>>>>>> 4bc6fea (feat : builder config roles)
-=======
 
 .css-1d3x0vt-MuiFormControl-root-MuiTextField-root {
   border-radius: 0.6rem;
 }
->>>>>>> 5ce9085 (feat: design profile user)
-=======
-}
->>>>>>> 7c453b5 (feat : builder config roles)

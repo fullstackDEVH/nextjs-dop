@@ -5,7 +5,6 @@ import HeaderProfile from '../(user)/HeaderUserProfile';
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <HeaderProfile />
       {children}
     </>
   );
