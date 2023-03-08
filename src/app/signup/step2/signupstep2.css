@@ -1,0 +1,56 @@
+.signupcontent-step2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.signupcontent-step2 .signupcontent__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+/* form  */
+.signupcontent-step2 .signupcontent__form {
+  width: 700px;
+  background: white;
+  font-size: 1.3rem;
+  padding: 35px 100px 10px;
+  border-radius: 10px;
+}
+.signupcontent-step2 .signupcontent__form .form__input {
+  width: 100%;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.signupcontent-step2 .signupcontent__form .form__input .input {
+  margin-top: 0px;
+  width: 70%;
+  border-radius: 5px;
+  border: 1px solid var(--main-color);
+}
+.signupcontent-step2 .signupcontent__form .form__input .slected {
+  width: 70%;
+  border-radius: 5px;
+  position: inherit;
+  left: 8px;
+  border: 1px solid var(--main-color);
+}
+.signupcontent-step2 .signupcontent__form .form__input .radio{
+    width: 70%;
+}
+.signupcontent-step2 .signupcontent__form .form__input span {
+  font-weight: 700;
+}
+/* btn */
+.btn {
+  position: inherit;
+  left: 150px;
+  width: auto;
+  height: 30px;
+}

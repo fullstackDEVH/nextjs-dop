@@ -1,0 +1,20 @@
+/* form  */
+.sendmail__form {
+  width: 400px;
+  font-size: 1.3rem;
+}
+.sendmail__form .form__input {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.sendmail__form .form__input .input {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--main-color);
+}
+.sendmail__form .form__input span {
+  font-weight: 700;
+}
+
+
