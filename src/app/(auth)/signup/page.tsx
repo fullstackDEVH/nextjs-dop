@@ -20,6 +20,7 @@ interface Country {
 }
 export default function SignUp() {
   const [currentStep, setCurrentStep] = useState(1);
+
   // const [dataSignUp, setDataSignUp] = useState({
   //   username: '',
   //   password: '',
@@ -102,7 +103,7 @@ export default function SignUp() {
     <>
       <Grid container sx={{ height: '100%' }}>
         <Grid item xs={3}>
-          <NavBarComponent />
+          <NavBarComponent currentStep={currentStep} />
         </Grid>
         <Grid item xs={9}>
           <div className={styles.signup__header}>

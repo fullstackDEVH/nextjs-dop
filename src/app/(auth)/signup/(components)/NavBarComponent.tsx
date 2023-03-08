@@ -3,7 +3,8 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const NavBarComponent = () => {
+const NavBarComponent = ( { currentStep } : any ) => {
+  
   return (
     <div className={styles.navbar}>
       <div className={styles.navbar__header}>
@@ -12,21 +13,21 @@ const NavBarComponent = () => {
       <div className={styles.navbar__content}>
         <div className={styles.step}>
           <div className={styles.line}></div>
-          <div className={styles.step__cicle}>1</div>
+          <div className={`${styles.step__cicle} ${currentStep === 1 ? styles.active : ""}`}>1</div>
           <label className={styles.step__label}>Create Account</label>
         </div>
         <div className={styles.step}>
           <div className={styles.line}></div>
-          <div className={styles.step__cicle}>2</div>
+          <div className={`${styles.step__cicle} ${currentStep === 2 ? styles.active : ""}`}>2</div>
           <label className={styles.step__label}>Basic Information</label>
         </div>
         <div className={styles.step}>
           <div className={styles.line}></div>
-          <div className={styles.step__cicle}>3</div>
+          <div className={`${styles.step__cicle} ${currentStep === 3 ? styles.active : ""}`}>3</div>
           <label className={styles.step__label}>Verification</label>
         </div>
         <div className={styles.step}>
-          <div className={styles.step__cicle}>4</div>
+          <div className={`${styles.step__cicle} ${currentStep === 4 ? styles.active : ""}`}>4</div>
           <label className={styles.step__label}>Done</label>
         </div>
       </div>

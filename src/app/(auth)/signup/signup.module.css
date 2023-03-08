@@ -39,6 +39,14 @@
   align-items: center;
   justify-content: center;
 }
+
+.step__cicle.active {
+  background: var(--main-color);
+  color : white;
+}
+
+
+
 .step__label {
   font-size: 1.4rem;
   font-weight: 700;
