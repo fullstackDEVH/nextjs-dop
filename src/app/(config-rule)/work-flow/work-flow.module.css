@@ -1,0 +1,9 @@
+.container {
+    width: 100%;
+    max-width: 1250px;
+    height: calc(100vh - var(--height-header-profile));
+    
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+  }

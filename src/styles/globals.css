@@ -328,4 +328,24 @@ input::-webkit-inner-spin-button {
 .css-1d3x0vt-MuiFormControl-root-MuiTextField-root {
   border-radius: 0.6rem;
 }
+<<<<<<< HEAD
 >>>>>>> 1ab1764 (change)
+=======
+
+  
+.react-flow__handle.target{
+  background: yellow ;
+  width: 10px;
+  height: 10px;
+  top: -5px;
+
+}
+
+  
+.react-flow__handle.source{
+  background: red ;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+}
+>>>>>>> 4bc6fea (feat : builder config roles)

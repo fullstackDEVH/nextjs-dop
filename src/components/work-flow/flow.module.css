@@ -1,0 +1,13 @@
+.flow {
+    flex-grow: 1;
+    flex : 1 1 600px;
+    font-size: 12px;
+  }
+  
+  .customNode {
+    border: 5px solid transparent;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+  }
+

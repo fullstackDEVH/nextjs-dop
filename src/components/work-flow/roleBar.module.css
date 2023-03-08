@@ -1,0 +1,19 @@
+.role__bar {
+    border-right: 2px solid #eee;
+}
+
+.role__bar h2 {
+    margin-top: 1rem;
+}
+
+.role__bar__contain__item {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    padding: 2px 4px;
+    border: 2px solid grey;
+    border-left: 1rem solid grey;
+
+    cursor: pointer;
+}
