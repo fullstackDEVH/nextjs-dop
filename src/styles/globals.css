@@ -278,7 +278,18 @@ input::-webkit-inner-spin-button {
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 55px 130px 60px 130px;
+  margin-top: 4rem;
+
+  
 }
+
+@media (min-width : 1024px) {
+  .form__app-container {
+    width: 80%;
+
+  }
+}
+
 .dropzone {
   display: flex;
   flex: 1;
@@ -344,4 +355,20 @@ input::-webkit-inner-spin-button {
 
 .css-1d3x0vt-MuiFormControl-root-MuiTextField-root {
   border-radius: 0.6rem;
+}
+
+/* mui ui stepper  */
+
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root {
+  font-size: 3rem;
+}
+
+.css-1hv8oq8-MuiStepLabel-label {
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+  font-weight: 400;
+}
+
+.css-117w1su-MuiStepIcon-text {
+  font-size: 1rem;
 }

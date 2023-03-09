@@ -2,7 +2,7 @@
 
 import SideBarItem from './SideBarItem';
 import styles from './sidebar.module.css';
-import { sidebar } from '@/constants/sidebar';
+import sidebar  from '@/lib/constants/sidebar';
 import { useState } from 'react';
 
 const SideBarProfile = () => {

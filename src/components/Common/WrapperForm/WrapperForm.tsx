@@ -9,7 +9,7 @@ interface Props {
 export default function WrapperForm({ title, children }: Props) {
   return (
     <div className={styles.wrap}>
-      <Typography
+      {/* <Typography
         variant="h4"
         sx={{
           width: '100%',
@@ -18,7 +18,7 @@ export default function WrapperForm({ title, children }: Props) {
         }}
       >
         {title}
-      </Typography>
+      </Typography> */}
       <div className={styles.content}>{children}</div>
     </div>
   );

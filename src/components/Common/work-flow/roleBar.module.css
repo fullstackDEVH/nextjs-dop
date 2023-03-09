@@ -1,9 +1,12 @@
 .role__bar {
-    border-right: 2px solid #eee;
 }
 
 .role__bar h2 {
     margin-top: 1rem;
+}
+
+.role__bar__contain {
+    margin-top: 1.5rem;
 }
 
 .role__bar__contain__item {

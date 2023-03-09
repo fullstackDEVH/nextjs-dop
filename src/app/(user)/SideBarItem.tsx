@@ -7,7 +7,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import Image from 'next/image';
 
 interface ISubItem {
-  sub_name: string;
+  sub_name?: string;
+  sub_link?: string;
 }
 
 interface Props {
@@ -42,7 +43,7 @@ const SideBarItem: React.FC<Props> = ({
 
       <div className={styles.side_bar__sub__list}>
         {sub_item.map(({ sub_name }, index) => (
-          <div className={styles.side_bar__sub__item} key={sub_name + index}>
+          <div className={styles.side_bar__sub__item} key={ index}>
             <CircleIcon style={{ fontSize: '8', color: 'white' }} />
             <div className={styles.side_bar__sub__item__name}>{sub_name}</div>
           </div>

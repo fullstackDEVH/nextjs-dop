@@ -20,11 +20,15 @@ function PaperComponent(props: PaperProps) {
   );
 }
 
-const DialogConfirm = () => {
+const DialogConfirm = ({ handleNextStep } : any) => {
     const [open, setOpen] = useState<boolean>(false);
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleSave = () => {
+    handleNextStep();
   };
 
   return (
@@ -51,7 +55,7 @@ const DialogConfirm = () => {
           <Button autoFocus onClick={handleClose}>
             Cancel
           </Button>
-          <Button onClick={handleClose}>Save</Button>
+          <Button onClick={handleSave}>Save</Button>
         </DialogActions>
       </Dialog>
     </div>

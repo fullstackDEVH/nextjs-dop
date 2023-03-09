@@ -57,7 +57,13 @@ const elements = [
   },
 ];
 
-const RolesBar = () => {
+
+interface IProps {
+  handleNextStep : () => void;
+  handlePreStep : () => void;
+}
+
+const RolesBar = ( { handleNextStep , handlePreStep} : IProps) => {
   const onDragStart = (e: DragEvent<HTMLDivElement>, nameRole: string) => {
     e.dataTransfer.setData('application/reactflow', nameRole);
     e.dataTransfer.effectAllowed = 'move';
@@ -93,7 +99,10 @@ const RolesBar = () => {
         <Button variant="outlined">
           Custom
         </Button>
-        <DialogConfirm />
+        <Button variant="outlined" onClick={handlePreStep}>
+          Previous
+        </Button>
+        <DialogConfirm handleNextStep={handleNextStep} />
       </div>
     </div>
   );
